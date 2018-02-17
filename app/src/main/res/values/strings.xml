@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AmriHanif_1202150075_Modul2</string>
+    <string name="nothing_selected" />
+    <string-array name="noMeja_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+</resources>
