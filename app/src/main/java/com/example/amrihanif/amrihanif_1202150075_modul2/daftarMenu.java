@@ -17,11 +17,11 @@ public class daftarMenu extends AppCompatActivity {
     private ArrayList<String> Price;
     private ArrayList<Integer> Gambar;
 
-    //Daftar Menu
+    //array menu
     private String[] menu = {"Nasi Goreng", "Mie rebus Spesial", "tempe goreng", "Sate Madura", "paket kenyang", "risol"};
-    //Daftar Harga
-    private String[] price = {"15.000", "10.000", "10.000", "25.000", "30.000", "25.000"};
-    //Daftar Gambar
+    //array harga
+    private String[] price = {"15.000", "10.000", "5.000", "25.000", "30.000", "5.000"};
+    //array gambar
     private int[] image = {R.drawable.nasgor, R.drawable.mirebus, R.drawable.tempegoreng, R.drawable.sate, R.drawable.paketkenyang,
             R.drawable.risol};
 
@@ -36,11 +36,13 @@ public class daftarMenu extends AppCompatActivity {
 
         recyclerView= findViewById(R.id.recyclerview);
         DaftarItem();
+
         //Menggunakan Layout Manager, Dan Membuat List Secara Vertical
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         adapter = new daftarMenuAdapter(Menu, Price, Gambar);
+
         //Memasang Adapter pada RecyclerView
         recyclerView.setAdapter(adapter);
     }

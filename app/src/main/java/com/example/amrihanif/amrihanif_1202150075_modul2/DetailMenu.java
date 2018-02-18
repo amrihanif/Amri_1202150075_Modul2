@@ -12,7 +12,7 @@ public class DetailMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_menu);
 
-        //mengeset button back agar muncul di view
+        //setting button back agar muncul di view
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //menerima value yang dikirimkan dari activity sebelumnya berupa sebuah key value
@@ -21,13 +21,13 @@ public class DetailMenu extends AppCompatActivity {
         String komposisi = getIntent().getStringExtra("komposisi");
         Integer image = getIntent().getIntExtra("image", 0);
 
-        //mendifinisikan TextView dan ImageView dengan id
+        //mendefinisikan TextView dan ImageView dengan id
         TextView txtMenu = findViewById(R.id.namaMenu);
         TextView txtPrice = findViewById(R.id.price);
         TextView txtkomposisi = findViewById(R.id.listkomposisi);
         ImageView images = findViewById(R.id.imageMenu);
 
-        //mengeset valuenya
+        //setting valuenya
         txtMenu.setText(menu);
         txtPrice.setText(price);
         txtkomposisi.setText(komposisi);

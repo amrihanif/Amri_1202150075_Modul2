@@ -22,13 +22,20 @@ public class DineIn extends AppCompatActivity implements AdapterView.OnItemSelec
         setContentView(R.layout.activity_dine_in);
 
         btpilih = (Button)findViewById(R.id.pilih);
+
+        // membuat spinner.
         Spinner spinner = (Spinner)findViewById(R.id.noMeja);
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
         }
+
+        // Create ArrayAdapter using the string array and default spinner layout.
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.noMeja_array,android.R.layout.simple_spinner_item);
+
+        // Specify the layout to use when the list of choices appears.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
+        // Apply the adapter to the spinner.
         if (spinner != null){
             spinner.setAdapter(adapter);
         }

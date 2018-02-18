@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-//Class Adapter ini Digunakan Untuk Mengatur Bagaimana Data akan Ditampilkan
+//Class Adapter ini Untuk Mengatur Bagaimana Data akan Ditampilkan
 public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.ViewHolder> {
 
-    private ArrayList<String> arrayListMenu; //Digunakan untuk Judul
-    private ArrayList<String> arrayListsPrice; //Digunakan untuk Menu
-    private ArrayList<Integer> gambar; //Digunakan untuk Image/Gambar
+    private ArrayList<String> arrayListMenu; // untuk Judul
+    private ArrayList<String> arrayListsPrice; // untuk Menu
+    private ArrayList<Integer> gambar; //untuk gambar
 
     //Membuat Konstruktor pada Class RecyclerViewAdapter
     daftarMenuAdapter(ArrayList<String> arrayListMenu, ArrayList<String> arrayListsPrice, ArrayList<Integer> Gambar){
@@ -25,7 +25,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
         this.gambar = Gambar;
     }
 
-    //ViewHolder Digunakan Untuk Menyimpan Referensi Dari View-View
+    //ViewHolder  Untuk Menyimpan Referensi Dari View-View
     class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView menu, price;
@@ -83,7 +83,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
                         intent.putExtra("menu", arrayListMenu.get(position));
                         intent.putExtra("price", arrayListsPrice.get(position));
                         intent.putExtra("image", gambar.get(position));
-                        komposisi = "Mie Goreng, Telur, Tomat, Cabe, Udang";
+                        komposisi = "Mie Kuah, Telur, Ayam, Tomat, Cabe";
                         intent.putExtra("komposisi", komposisi);
                         view.getContext().startActivity(intent);
                         break;
@@ -91,7 +91,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
                         intent.putExtra("menu", arrayListMenu.get(position));
                         intent.putExtra("price", arrayListsPrice.get(position));
                         intent.putExtra("image", gambar.get(position));
-                        komposisi = "Mie Kuah, Telur, Ayam, Tomat, Cabe";
+                        komposisi = "kedelai pilihan";
                         intent.putExtra("komposisi", komposisi);
                         view.getContext().startActivity(intent);
                         break;
@@ -99,7 +99,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
                         intent.putExtra("menu", arrayListMenu.get(position));
                         intent.putExtra("price", arrayListsPrice.get(position));
                         intent.putExtra("image", gambar.get(position));
-                        komposisi = "Daging, Kecap, Nasi, Cabe, Bawang";
+                        komposisi = "daging ayam, kacang, kecap, cabe";
                         intent.putExtra("komposisi", komposisi);
                         view.getContext().startActivity(intent);
                         break;
@@ -107,7 +107,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
                         intent.putExtra("menu", arrayListMenu.get(position));
                         intent.putExtra("price", arrayListsPrice.get(position));
                         intent.putExtra("image", gambar.get(position));
-                        komposisi = "Mie Kuah, Beef";
+                        komposisi = "Kentang, Roti, daging";
                         intent.putExtra("komposisi", komposisi);
                         view.getContext().startActivity(intent);
                         break;
@@ -115,7 +115,7 @@ public class daftarMenuAdapter extends RecyclerView.Adapter<daftarMenuAdapter.Vi
                         intent.putExtra("menu", arrayListMenu.get(position));
                         intent.putExtra("price", arrayListsPrice.get(position));
                         intent.putExtra("image", gambar.get(position));
-                        komposisi = "Nasi, Kecap, Telur, Tomat, Cabe, Bawang, Sayur";
+                        komposisi = "Wortel, Kentang";
                         intent.putExtra("komposisi", komposisi);
                         view.getContext().startActivity(intent);
                         break;
